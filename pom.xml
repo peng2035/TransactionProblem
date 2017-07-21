@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bobby.peng</groupId>
+    <artifactId>transaction-problem</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <business.hotline.version>1.0.17.1-SNAPSHOT</business.hotline.version>
+        <xima.accounting.version>1.1.19</xima.accounting.version>
+        <business.orderno.core.version>1.0.3</business.orderno.core.version>
+        <xima.financial.accounting.version>1.0.31</xima.financial.accounting.version>
+        <pay.version>1.0.13</pay.version>
+        <skip_maven_deploy>true</skip_maven_deploy>
+    </properties>
+
+    <modules>
+        <module>transaction-problem-web</module>
+    </modules>
+
+
+</project>
