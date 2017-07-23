@@ -7,8 +7,8 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="mapperLocations" value="classpath*:hotline-command-*.xml"/>
-        <property name="configLocation" value="classpath:config/sqlmap/hotline-command-config.xml"/>
+        <property name="mapperLocations" value="classpath*:mybatis/mapper/mapper*.xml"/>
+        <property name="configLocation" value="classpath:mybatis/db-config.xml"/>
     </bean>
 
     <bean id="accountDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
