@@ -10,4 +10,5 @@ public interface UserDao {
 
     User findByUserId(@Param("userId") long userId);
 
+    void updateNameByUserId(@Param("userId") long userId, @Param("name") String name);
 }

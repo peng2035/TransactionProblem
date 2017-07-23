@@ -15,4 +15,8 @@
         <include refid="sql_select"/>
         WHERE USER_ID = #{userId}
     </select>
+
+    <update id="updateNameByUserId">
+        UPDATE TP_USER SET NAME = #{name} WHERE USER_ID = #{userId}
+    </update>
 </mapper>

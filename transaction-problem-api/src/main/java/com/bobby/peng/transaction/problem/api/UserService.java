@@ -9,4 +9,5 @@ public interface UserService {
 
     UserDTO findById(long userId);
 
+    void updateNameByUserId(long userId, String name);
 }

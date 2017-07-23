@@ -7,12 +7,13 @@ import com.bobby.peng.transaction.problem.translator.UserTranslator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by peng2035 on 2017/7/23.
  */
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDao userDao;
@@ -21,4 +22,8 @@ public class UserServiceImpl implements UserService{
         return UserTranslator.buildUserDTO(userDao.findByUserId(userId));
     }
 
+    @Transactional
+    public void updateNameByUserId(long userId, String name) {
+        userDao.updateNameByUserId(userId, name);
+    }
 }
