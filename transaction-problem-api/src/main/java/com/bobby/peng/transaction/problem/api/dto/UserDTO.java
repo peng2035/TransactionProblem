@@ -1,9 +1,9 @@
-package com.bobby.peng.transaction.problem.domain.entity;
+package com.bobby.peng.transaction.problem.api.dto;
 
 /**
  * Created by peng2035 on 2017/7/23.
  */
-public class User {
+public class UserDTO {
 
     private long userId;
 
@@ -11,10 +11,10 @@ public class User {
 
     private String desc;
 
-    public User() {
+    public UserDTO() {
     }
 
-    public User(long userId, String name, String desc) {
+    public UserDTO(long userId, String name, String desc) {
         this.userId = userId;
         this.name = name;
         this.desc = desc;
@@ -24,11 +24,23 @@ public class User {
         return userId;
     }
 
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getDesc() {
         return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }

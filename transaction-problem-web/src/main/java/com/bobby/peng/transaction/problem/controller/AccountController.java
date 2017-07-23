@@ -1,6 +1,10 @@
 package com.bobby.peng.transaction.problem.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.bobby.peng.transaction.problem.api.AccountService;
+import com.bobby.peng.transaction.problem.api.UserService;
 import com.bobby.peng.transaction.problem.common.CommonResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,10 +14,16 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class AccountController {
 
+    @Autowired
+    private AccountService accountService;
+
+    @Autowired
+    private UserService userService;
+
     @RequestMapping("/account/{accountId}")
     @ResponseBody
     public CommonResponse findByAccountId(@PathVariable long accountId) {
-        return new CommonResponse(200,String.valueOf(accountId));
+        return new CommonResponse(200, JSON.toJSONString(accountService.findById(accountId)));
     }
 
 
