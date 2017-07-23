@@ -9,15 +9,15 @@ public class UserDTO {
 
     private String name;
 
-    private String desc;
+    private String description;
 
     public UserDTO() {
     }
 
-    public UserDTO(long userId, String name, String desc) {
+    public UserDTO(long userId, String name, String description) {
         this.userId = userId;
         this.name = name;
-        this.desc = desc;
+        this.description = description;
     }
 
     public long getUserId() {
@@ -36,11 +36,11 @@ public class UserDTO {
         this.name = name;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

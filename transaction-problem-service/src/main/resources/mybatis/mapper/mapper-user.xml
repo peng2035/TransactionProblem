@@ -6,7 +6,7 @@
         SELECT
         USER_ID,
         NAME,
-        DESC
+        DESCRIPTION
         FROM
         TP_USER
     </sql>

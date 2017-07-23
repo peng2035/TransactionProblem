@@ -9,10 +9,10 @@ import com.bobby.peng.transaction.problem.domain.entity.User;
 public class UserTranslator {
 
     public static User buildUser(UserDTO userDTO) {
-        return new User(userDTO.getUserId(),userDTO.getName(),userDTO.getDesc());
+        return new User(userDTO.getUserId(),userDTO.getName(),userDTO.getDescription());
     }
 
     public static UserDTO buildUserDTO(User user) {
-        return new UserDTO(user.getUserId(),user.getName(),user.getDesc());
+        return new UserDTO(user.getUserId(),user.getName(),user.getDescription());
     }
 }

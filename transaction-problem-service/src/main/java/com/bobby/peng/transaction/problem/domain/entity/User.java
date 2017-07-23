@@ -9,15 +9,15 @@ public class User {
 
     private String name;
 
-    private String desc;
+    private String description;
 
     public User() {
     }
 
-    public User(long userId, String name, String desc) {
+    public User(long userId, String name, String description) {
         this.userId = userId;
         this.name = name;
-        this.desc = desc;
+        this.description = description;
     }
 
     public long getUserId() {
@@ -28,7 +28,7 @@ public class User {
         return name;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 }
