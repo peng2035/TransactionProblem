@@ -11,12 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <business.hotline.version>1.0.17.1-SNAPSHOT</business.hotline.version>
-        <xima.accounting.version>1.1.19</xima.accounting.version>
-        <business.orderno.core.version>1.0.3</business.orderno.core.version>
-        <xima.financial.accounting.version>1.0.31</xima.financial.accounting.version>
-        <pay.version>1.0.13</pay.version>
-        <skip_maven_deploy>true</skip_maven_deploy>
+        <org.springframework.version>4.3.10.RELEASE</org.springframework.version>
     </properties>
 
     <modules>
@@ -30,37 +25,52 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
-                <version>4.3.10.RELEASE</version>
+                <version>${org.springframework.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-aop</artifactId>
-                <version>4.3.10.RELEASE</version>
+                <version>${org.springframework.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
-                <version>4.3.10.RELEASE</version>
+                <version>${org.springframework.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
-                <version>4.3.10.RELEASE</version>
+                <version>${org.springframework.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
-                <version>4.3.10.RELEASE</version>
+                <version>${org.springframework.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
-                <version>4.3.10.RELEASE</version>
+                <version>${org.springframework.version}</version>
             </dependency>
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>1.2.17</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${org.springframework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>2.5.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.5.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

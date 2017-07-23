@@ -12,14 +12,11 @@
 
     <appender name="asyncAppender" class="org.apache.log4j.AsyncAppender">
         <param name="BufferSize" value="4096" />
-        <appender-ref ref="mailAppender" />
+        <appender-ref ref="CONSOLE" />
     </appender>
 
     <root>
         <level value="INFO"/>
-        <appender-ref ref="appAppender" />
         <appender-ref ref="asyncAppender"/>
     </root>
-
-
 </log4j:configuration>
