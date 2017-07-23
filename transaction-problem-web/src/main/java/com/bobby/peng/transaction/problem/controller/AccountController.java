@@ -30,7 +30,9 @@ public class AccountController {
     @RequestMapping(value = "/account/{accountId}", method = RequestMethod.PUT)
     @ResponseBody
     public CommonResponse incrMoneyByAccountId(@PathVariable long accountId) {
-        return new CommonResponse(200,"hello");
+        accountService.incrAccountBalanceAmountWithoutCommit(accountId);
+
+        return new CommonResponse(200, JSON.toJSONString(accountService.findById(accountId)));
     }
 
 }

@@ -5,6 +5,7 @@ import com.bobby.peng.transaction.problem.api.dto.UserDTO;
 import com.bobby.peng.transaction.problem.dao.UserDao;
 import com.bobby.peng.transaction.problem.translator.UserTranslator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Service;
 
 /**

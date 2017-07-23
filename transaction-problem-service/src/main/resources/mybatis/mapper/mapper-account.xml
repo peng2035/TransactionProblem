@@ -16,4 +16,7 @@
         WHERE ACCOUNT_ID = #{accountId}
     </select>
 
+    <update id="incrAccountBalanceAmount">
+        update TP_ACCOUNT SET BALANCE_AMOUNT = BALANCE_AMOUNT + 1 WHERE ACCOUNT_ID = #{accountId}
+    </update>
 </mapper>

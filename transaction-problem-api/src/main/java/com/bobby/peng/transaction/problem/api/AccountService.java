@@ -9,4 +9,6 @@ public interface AccountService {
 
     AccountDTO findById(long accountId);
 
+    void incrAccountBalanceAmountWithoutCommit(long accountId);
+
 }

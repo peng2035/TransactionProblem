@@ -10,4 +10,6 @@ public interface AccountDao {
 
     Account findByAccountId(@Param("accountId") long accountId);
 
+    void incrAccountBalanceAmount(@Param("accountId") long accountId);
+
 }
