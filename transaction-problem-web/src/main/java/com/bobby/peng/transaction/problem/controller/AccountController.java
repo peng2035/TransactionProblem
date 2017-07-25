@@ -17,9 +17,6 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    @Autowired
-    private UserService userService;
-
     @RequestMapping("/account/{accountId}")
     @ResponseBody
     public CommonResponse findByAccountId(@PathVariable long accountId) {

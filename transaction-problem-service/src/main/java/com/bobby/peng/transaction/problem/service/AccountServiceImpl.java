@@ -35,13 +35,10 @@ public class AccountServiceImpl implements AccountService {
         def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
         TransactionStatus status = txManager.getTransaction(def);
         boolean flag = true;
-        try {
-            accountDao.incrAccountBalanceAmount(accountId);
+        accountDao.incrAccountBalanceAmount(accountId);
 
-            if(flag) throw new RuntimeException("hello");
-            txManager.commit(status);
-        } catch (Exception e) {
-            return;
-        }
+        if (flag) return;
+        txManager.commit(status);
+
     }
 }

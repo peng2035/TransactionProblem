@@ -26,9 +26,28 @@
         <property name="checkoutTimeout" value="#{jdbc['c3p0.checkoutTimeout']}"/>
     </bean>
 
+    <!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"-->
+          <!--destroy-method="close" lazy-init="false">-->
+        <!--<property name="driverClassName" value="#{jdbc['jdbc.driverClassName']}"/>-->
+        <!--<property name="url" value="#{jdbc['jdbc.url']}"/>-->
+        <!--<property name="username" value="#{jdbc['jdbc.username']}"/>-->
+        <!--<property name="password" value="#{jdbc['jdbc.password']}"/>-->
+        <!--<property name="maxActive" value="#{jdbc['c3p0.maxPoolSize']}"/>-->
+        <!--<property name="maxIdle" value="#{jdbc['c3p0.maxPoolSize']}"/>-->
+        <!--<property name="maxWait" value="#{jdbc['c3p0.maxIdleTime']}"/>-->
+        <!--<property name="defaultAutoCommit" value="false"/>-->
+    <!--</bean>-->
+
+
     <tx:annotation-driven/>
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+
+    <!-- TDDL DataSource -->
+    <!--<bean id="dataSource" class="com.taobao.tddl.client.jdbc.TDataSource" init-method="init">-->
+        <!--<property name="appName" value="" />-->
+        <!--<property name="dynamicRule" value="true" />-->
+    <!--</bean>-->
 </beans>
